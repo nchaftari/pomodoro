@@ -1,0 +1,11 @@
+<app-splash-screen @fadeOut *ngIf="loaded"></app-splash-screen>
+<app-window >
+  <app-navbar [attr.data-bs-theme]="colorTheme"></app-navbar>
+  <router-outlet *ngIf="!loaded"></router-outlet>
+  <div [attr.data-bs-theme]="colorTheme">
+    <app-settings ></app-settings>
+    <app-about [attr.data-bs-theme]="colorTheme"></app-about>
+  </div>
+
+
+</app-window>

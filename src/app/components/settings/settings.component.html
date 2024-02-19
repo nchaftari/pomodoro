@@ -1,0 +1,79 @@
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Settings</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="count">Pomodoro Count</label>
+            <input type="number" id="pomodoroCount" formControlName="pomodoroCount" class="form-control" min="1"
+              max="10"
+              [ngClass]="!myForm.get('pomodoroCount')?.valid && myForm.get('pomodoroCount')?.touched?'invalid':''">
+            <span class="help-block"
+              *ngIf="!myForm.get('pomodoroCount')?.valid && myForm.get('pomodoroCount')?.touched">
+              Value must be greater than 0 !</span>
+          </div>
+          <div class="form-group">
+            <label for="count">Pomodoro Length</label>
+            <input type="number" id="length" formControlName="length" class="form-control" min="1"
+              [ngClass]="!myForm.get('length')?.valid && myForm.get('length')?.touched?'invalid':''">
+            <span class="help-block" *ngIf="!myForm.get('length')?.valid && myForm.get('length')?.touched">
+              Value must be greater than 0 !</span>
+          </div>
+          <div class="form-group">
+            <label for="count">Short Break Length</label>
+            <input type="number" id="shortBreak" formControlName="shortBreak" class="form-control" min="1"
+              [ngClass]="!myForm.get('shortBreak')?.valid && myForm.get('shortBreak')?.touched?'invalid':''">
+            <span class="help-block" *ngIf="!myForm.get('shortBreak')?.valid && myForm.get('shortBreak')?.touched">
+              Value must be greater than 0 !</span>
+          </div>
+          <div class="form-group">
+            <label for="count">Long Break Length</label>
+            <input type="number" id="longBreak" formControlName="longBreak" class="form-control" min="1"
+              [ngClass]="!myForm.get('longBreak')?.valid && myForm.get('longBreak')?.touched?'invalid':''">
+            <span class="help-block" *ngIf="!myForm.get('longBreak')?.valid && myForm.get('longBreak')?.touched">
+              Value must be greater than 0 !</span>
+          </div>
+          <div class="estTime">Total time:<span class="val"> {{totalTime | m2h}}</span></div>
+
+          <hr>
+          <div formGroupName="colorTheme" class="colors">
+            <div class="form-group">
+              <label for="main">Work</label>
+              <input type="color" formControlName="main" id="main">
+            </div>
+            <div class="form-group">
+              <label for="shortBreak">Short Break</label>
+
+              <input type="color" formControlName="shortBreak" id="shortBreak">
+            </div>
+            <div class="form-group">
+              <label for="longBreak">Long Break</label>
+
+              <input type="color" formControlName="longBreak" id="longBreak">
+            </div>
+          </div>
+          <!-- <div class="form-check form-switch">
+            <label for="themeSwitch" class="form-check-label">Dark Theme</label>
+            <input type="text" class="form-check-input" type="checkbox" id="themeSwitch" [checked]="colorTheme=='dark'"
+              (click)="toggleTheme()">
+          </div> -->
+
+          <hr>
+          <div class="buttons">
+            <button (click)="defaultPomo()" class="btn btn-secondary">Default</button>
+            <button type="submit" [disabled]="!form.valid && form.touched" class="btn btn-danger"
+              data-bs-dismiss="modal">Apply</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.timer {
+  font-size: 12em;
+  font-weight: 900;
+  color: #fdf8ed;
+  transition: 1s ease-in;
+  // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.status {
+  font-family: "Chillax-Regular";
+  color: #fdf8ed;
+}
+.started {
+  font-size: 6rem;
+}
+.info {
+  font-family: "Chillax-Regular";
+  color: #949494;
+  margin-top: 2rem;
+}
+.info span{
+  font-family: "Chillax-Bold";
+  color: #c7c3c3;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.paused{
+  color: rgba(255, 255, 255, 0.442) !important;
+}
+@media (max-width: 767px) {
+  /* styles for screens with width up to 767px */
+  .timer {
+    font-size: 7em;
+    font-weight: 900;
+    color: #fdf8ed;
+    transition: 1s ease-in;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .started {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* styles for screens with width between 768px and 1023px */
+
+  .timer {
+    font-size: 10em;
+    font-weight: 900;
+    color: #fdf8ed;
+    transition: 1s ease-in;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .started {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* styles for screens with width greater than or equal to 1024px */
+
+  .timer {
+    font-size: 11em;
+    font-weight: 900;
+    color: #fdf8ed;
+    transition: 1s ease-in;
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .started {
+    font-size: 6rem;
+  }
+}

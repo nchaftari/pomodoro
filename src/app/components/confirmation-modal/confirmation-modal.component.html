@@ -1,0 +1,24 @@
+<i class="bi bi-x-circle set" data-bs-toggle="modal" data-bs-target="#confirmationModal" @fadeIn></i>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true"
+  data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="confirmationModalLabel">Confirmation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="info"> Canceling will reset time and all progress made, are you sure you want to continue?
+        </div>
+        <hr>
+        <div class="buttons">
+          <button class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-danger" data-bs-dismiss="modal" (click)="stopPomo()">Continue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="status" *ngIf="state=='done'" @fadeIn>Session Complete! Please start a new session.</div>
+  <div class="status" *ngIf="state=='pomodoro'" @fadeIn>{{workPhrase}}</div>
+  <div class="status" *ngIf="state=='shortBreak'" @fadeIn>{{shortBreakPhrase}}</div>
+  <div class="status" *ngIf="state=='longBreak'" @fadeIn>{{longBreakPhrase}}</div>
+  <div class="timer" [ngClass]="{started: !started,paused:paused}" >
+    <span>{{min | number:'2.0-0'}}</span>:{{sec | number:'2.0-0'}}
+  </div>
+  <div class="buttons">
+    <button class="btn btn-primary" (click)="startPomo()" [disabled]="started">Start</button>
+    <button class="btn btn-danger" (click)="pausePomo()" [disabled]="!started || completed"><span
+        *ngIf="!paused">Pause</span><span *ngIf="paused">Resume</span></button>
+    <button class="btn btn-secondary" (click)="resumePomo()" [disabled]="!completed">Next</button>
+
+  </div>
+  <app-confirmation-modal *ngIf="started"></app-confirmation-modal>
+
+  <div class="info">Check <span data-bs-toggle="modal" data-bs-target="#exampleModal" >Settings</span> to configure your
+    pomodoros.</div>
+
+
+
+</div>

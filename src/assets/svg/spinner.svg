@@ -1,0 +1,18 @@
+<svg id="e2OqlcgL68R1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 150 150" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <style><![CDATA[
+  #e2OqlcgL68R2_tr {animation: e2OqlcgL68R2_tr__tr 4000ms linear infinite normal forwards}@keyframes e2OqlcgL68R2_tr__tr { 0% {transform: translate(75px,75px) rotate(359.567878deg)} 100% {transform: translate(75px,75px) rotate(1080.374458deg)}}
+  ]]></style>
+  <g id="e2OqlcgL68R2_tr" transform="translate(75,75) rotate(359.567878)">
+    <g transform="scale(0.780689,0.780689) translate(-71.874744,-71.797798)">
+      <ellipse rx="25" ry="25" transform="translate(39.853099 39.531417)" fill="none" stroke="#fff"
+        stroke-width="14" />
+      <ellipse rx="25" ry="25" transform="translate(103.790791 104.015863)" fill="none"
+        stroke="#fff" stroke-width="14" />
+      <ellipse rx="25" ry="25" transform="translate(39.901404 104.064168)" fill="#ff0000"
+        stroke="#ff0000" stroke-width="14" />
+      <ellipse rx="25" ry="25" transform="translate(103.896389 40.014435)" fill="none" stroke="#fff"
+        stroke-width="14" />
+    </g>
+  </g>
+</svg>
